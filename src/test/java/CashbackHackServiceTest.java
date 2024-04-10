@@ -15,7 +15,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    public void shouldReturnRemainValue444() {
+    public void shouldReturnRemainValue766() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1234;
         int actual = service.remain(amount);
@@ -24,7 +24,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    public void shouldReturnRemainValue888() {
+    public void shouldReturnRemainValue999() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1;
         int actual = service.remain(amount);
@@ -42,7 +42,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    public void shouldReturnRemainValue() {
+    public void shouldReturnRemainValue1001() {
         CashbackHackService service = new CashbackHackService();
         int amount = -1;
         int actual = service.remain(amount);
