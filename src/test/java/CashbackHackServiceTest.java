@@ -1,7 +1,7 @@
 import org.testng.annotations.Test;
 import ru.netology.CashbackHackService;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 public class CashbackHackServiceTest {
 
