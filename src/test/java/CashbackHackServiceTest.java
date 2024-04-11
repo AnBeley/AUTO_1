@@ -1,52 +1,52 @@
 import org.testng.annotations.Test;
 import ru.netology.CashbackHackService;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.Assert.*;
 
 public class CashbackHackServiceTest {
 
     @Test
     public void shouldReturnRemainValue0() {
         CashbackHackService service = new CashbackHackService();
-        int amount = 1000;
-        int actual = service.remain(amount);
+        int amount = 1_000;
         int expected = 0;
-        assertEquals(expected, actual);
+        int actual = service.remain(amount);
+        assertEquals(actual, expected);
     }
 
     @Test
     public void shouldReturnRemainValue766() {
         CashbackHackService service = new CashbackHackService();
-        int amount = 1234;
-        int actual = service.remain(amount);
+        int amount = 1_234;
         int expected = 766;
-        assertEquals(expected, actual);
+        int actual = service.remain(amount);
+        assertEquals(actual, expected);
     }
 
     @Test
     public void shouldReturnRemainValue999() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1;
-        int actual = service.remain(amount);
         int expected = 999;
-        assertEquals(expected, actual);
+        int actual = service.remain(amount);
+        assertEquals(actual, expected);
     }
 
     @Test
     public void shouldReturnRemainValue1000() {
         CashbackHackService service = new CashbackHackService();
         int amount = 0;
+        int expected = 1_000;
         int actual = service.remain(amount);
-        int expected = 1000;
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
     }
 
     @Test
     public void shouldReturnRemainValue1001() {
         CashbackHackService service = new CashbackHackService();
         int amount = -1;
+        int expected = 1_001;
         int actual = service.remain(amount);
-        int expected = 1001;
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
     }
 }
